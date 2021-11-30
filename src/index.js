@@ -5,15 +5,16 @@ import fonts from './css/fonts.css';
 import css from './css/main.css';
 
 // JS
-// import axios from 'axios';
-import test from './js/test.js';
-import config from './data/config.json';
+import p5 from 'p5';
+import sketch from './js/sketch.js'
+
 
 const init = async () => {
-	
-	console.log('hello, world');
+	console.log('hello, ml5');
 
-	test.init();
+	// Initializing p5.js
+	// p5 requires two arguments: new p5(sketch function, target DOM element)
+	new p5(sketch, document.getElementById('app'))
 };
 
 init();
